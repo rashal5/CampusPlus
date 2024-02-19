@@ -1,0 +1,22 @@
+{% for code in codes %}
+<h2>codes  </h2>
+<h3 >{{ code.studentcode }}</h3>
+<h3 >{{ code.teachercode }}</h3><br>
+<a href="{% url 'delitem' pk=code.id %}">delete now</a>
+{% endfor %}
+<br>
+{% for memo in memos %}
+<h2>memos  </h2>
+<h3 >{{ memo.title}}</h3>
+<h3 >{{ memo.description}}</h3><br>
+<a href="{% url 'delitem' pk=memo.id %}">delete now</a>
+{% endfor %}
+<br>
+{% for department in departments %}
+<h2>departments  </h2>
+<h3 >{{ department.name}}</h3>
+<h3 >{{ department.description}}</h3><br>
+<a href="{% url 'delitem' pk=department.id %}">delete now</a>
+{% endfor %}
+<br>
+<a href="admin">home page</a>

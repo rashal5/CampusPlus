@@ -1,0 +1,17 @@
+<h2>Teacher List</h2>
+
+<li><a class="getstarted scrollto" href="{% url 'login' %}">logout</a></li>
+<li><a class="getstarted scrollto" href="admin">back</a></li>
+<li><a class="getstarted scrollto" href="home">home</a></li>
+<table border="1">
+    <tr>
+        <th>Username</th>
+        <th>Email Address</th>
+    </tr>
+    {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.username }}</td>
+            <td>{{ teacher.email }}</td>
+        </tr>
+    {% endfor %}
+</table>

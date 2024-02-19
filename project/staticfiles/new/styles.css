@@ -1,0 +1,41 @@
+
+.ticker-container {
+    overflow: hidden;
+    background-color: #011431;
+    color: #fff;
+    height: 50px;
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker-scroll 20s linear infinite;
+}
+
+.ticker span {
+    margin-right: 20px;
+}
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.profilecontainer{
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+

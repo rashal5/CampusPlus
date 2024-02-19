@@ -1,0 +1,78 @@
+
+      {% load static %}
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <title>Login V15</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--===============================================================================================-->	
+        <link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico' %}"/>
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+      
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'login/css/uti.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'login/css/mainn.css' %}">
+        <link href="{% static 'assets/css2.css' %}" rel="stylesheet">
+          <link href="{% static 'assets/main.css' %}" rel="stylesheet">
+      <!--===============================================================================================-->
+      </head>
+      <body>
+        <header id="header" class="header d-flex align-items-center">
+                
+                    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+                      <a href="#" class="logo d-flex align-items-center">
+                        <!-- Uncomment the line below if you also wish to use an image logo -->
+                        <!-- <img src="assets/img/logo.png" alt=""> -->
+                        <h1>CampusPlus<span>.</span></h1>
+                      </a>
+                      <nav id="navbar" class="navbar">
+                        <ul>
+                          <li><a class="m4" href="home">Home</a></li>
+                          <li><a class="m4" href="register">signup</a></li>
+                          <li><a class="m4" href="login">login</a></li>
+                        </ul>
+                      </nav><!-- .navbar -->
+                
+                      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+                      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+                
+                    </div>
+                  </header>
+        <div class="limiter">
+          <div class="container-login100">
+            <div class="wrap-login100">
+              <div class="login100-form-title" style="background-image: url({% static 'login/images/bg-01.jpg' %});">
+                <span class="login100-form-title-1">
+                  Sign In
+                </span>
+              </div>
+              
+              <form method="post" class="login100-form validate-form">
+                
+                  {% csrf_token %}
+                  <div class="wrap-input100 validate-input m-b-26" >
+                    {{ form.as_p }}
+                    <span class="focus-input100"></span>
+                  </div>
+                  
+                
+                
+                <div class="container-login100-form-btn">
+                  <button type="submit"  class="login100-form-btn">
+                    signup
+                  </button>
+                </div>
+                
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </body>
+      </html>
+      
+      

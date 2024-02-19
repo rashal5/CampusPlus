@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create program video</title>
+</head>
+<body>
+    <h2>Create program</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create video">
+    </form>
+</body>
+</html>

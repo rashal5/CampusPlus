@@ -1,0 +1,64 @@
+
+      
+
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Login V15</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->	
+      <link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico' %}"/>
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="{% static 'login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+    
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="{% static 'login/css/uti.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'login/css/mainn.css' %}">
+    <!--===============================================================================================-->
+    </head>
+    <body>
+      
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100">
+            <div class="login100-form-title" style="background-image: url({% static 'login/images/bg-01.jpg' %});">
+              <span class="login100-form-title-1">
+                authentication page for student
+              </span>
+            </div>
+            {% csrf_token %}
+            
+            <form method="post" action="checkstudent" class="login100-form validate-form">
+              {% csrf_token %}
+              <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                <span class="label-input100">enter key</span>
+                <input class="input100" type="text" name="codes" placeholder="Enter code" required>
+                <span class="focus-input100"></span>
+              </div>
+              
+              <div class="flex-sb-m w-full p-b-30">
+                <div class="contact100-form-checkbox">
+                  {% for message in messages %}
+                 <p>{{message}}</p>
+                 {% endfor %}
+                </div>
+              
+              <div class="container-login100-form-btn">
+                <button type="submit" class="login100-form-btn">
+                  check
+                </button>
+              </div>
+              </form>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </body>
+    </html>
+    
+             

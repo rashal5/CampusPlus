@@ -1,0 +1,66 @@
+
+        
+       
+      
+
+
+
+        {% load static %}
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="{% static 'globals.css' %}" />
+            <link rel="stylesheet" href="{% static 'styleguide.css' %}" />
+            <link rel="stylesheet" href="{% static 'style.css' %}" />
+          </head>
+          <body>
+            <div class="desktop">
+              <div class="overlap-wrapper">
+                <div class="overlap">
+                  <img class="element" src="{% static 'img/1p-1.png' %}" />
+                  <div class="element-header">
+                    <div class="left-side">
+                      <div class="frame">
+                        <div class="text">
+                          <div class="overlap-group">
+                            <div class="the-design-thinking">&#34;Lighting knowledge spark&#34;</div>
+                            <p class="tools-tutorials-de">
+                              Welcome, esteemed educators! Join our online community dedicated to fostering learning excellence.
+                              Explore resources, collaborate with fellow teachers, and inspire the next generation.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div">
+                    <div class="img-wrapper"><img class="img" src="{% static 'img/upload-pdf.png' %}" /></div>
+                    <div class="img-wrapper"><img class="create-add-on" src="{% static 'img/create-add-on-courses.png' %}" /></div>
+                    <div class="img-wrapper"><img class="img" src="{% static 'img/student-analysis.png' %}" /></div>
+                    <div class="img-wrapper"><img class="img" src="{% static 'img/view-feedback-s.png' %}" /></div>
+                    <div class="img-wrapper"><img class="upload-class-video" src="{% static 'img/upload-class-video-links.png' %}" /></div>
+                  </div>
+                  <div class="frame-2">
+                    <img class="rectangle" src="{% static 'img/rectangle.svg' %}" />
+                    <div class="text-wrapper">EduConnect</div>
+                  </div>
+                  <div class="frame-3"></div>
+                  <div class="frame-4">
+                    <button class="button">
+                      <button class="button-primary">
+                        <div class="sign-up-wrapper"><div class="sign-up"><a href="{% url 'login' %}" class="btn-get-started scrollto">login now</a></div></div>
+                      </button>
+                    </button>
+                    <button class="button">
+                      <button class="button-primary">
+                        <div class="sign-up-wrapper"><div class="sign-up"> <a href="registerteacher" class="btn-get-started scrollto">signup now</a></div></div>
+                      </button>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+        </html>
+        
